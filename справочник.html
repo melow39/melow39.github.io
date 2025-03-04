@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Интерактивный справочник по терминам </title>
+
+    <style>
+
+        /* Стили для оформления страницы */
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1> Интерактивный справочник по терминам </h1>
+
+  <footer>
+
+        <p>&copy; 2025 Интерактивный справочник по психологии</p>
+
+    </footer>
+
+<script>
+
+  </script>
+
+    </body>
+
+</html>
+<style>
+
+        body {
+
+            font-family: 'Arial', sans-serif;
+
+            margin: 0;
+
+            padding: 0;
+
+            background-color: #e9ecef;
+
+            color: #343a40;
+
+        }
+
+        h1 {
+
+            text-align: center;
+
+            color: #007bff;
+
+            margin: 20px 0;
+
+            font-size: 2.5em;
+
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .container {
+
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            padding: 20px;
+
+            background-color: #ffffff;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .term {
+
+            background-color: #f8f9fa;
+
+            margin: 15px 0;
+
+            padding: 15px;
+
+            border-radius: 8px;
+
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+            transition: transform 0.2s;
+
+        }
+
+        .term:hover {
+
+            transform: scale(1.02);
+
+        }
+
+        .term h2 {
+
+            margin: 0;
+
+            font-size: 1.8em;
+
+            color: #007bff;
+
+        }
+
+        .term p {
+
+            margin: 5px 0;
+
+            line-height: 1.6;
+
+        }
+
+        .search-container {
+
+            margin: 20px 0;
+
+            text-align: center;
+
+        }
+
+        .search-input {
+
+            padding: 10px;
+
+            width: 80%;
+
+            max-width: 400px;
+
+            border: 1px solid #007bff;
+
+            border-radius: 5px;
+
+            font-size: 1em;
+
+        }
+
+        footer {
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            font-size: 0.9em;
+
+            color: #666;
+
+        }
+
+    </style>
+
+<div class="search-container">
+
+            <input type="text" class="search-input" placeholder="Поиск термина..." onkeyup="filterTerms()">
+
+        </div>
+
+        <div class="term" id="term-sociology">
+
+            <h2>Фреска</h2>
+
+            <p>техника живописи по сырой штукатурке, при которой краски впитываются в поверхность стены и становятся частью её структуры. Широко использовалась в эпоху Ренессанса.</p>
+
+        </div>
+
+ 
+
+        <div class="term" id="term-political-science">
+
+            <h2>Перспектива </h2>
+
+            <p>способ изображения трёхмерного пространства на плоскости, создающий ощущение глубины. В искусстве особенно развивалась в эпоху Возрождения.</p>
+
+        </div>
+        <div class="term" id="term-civil-society">
+
+            <h2>Импрессионизм</h2>
+
+            <p>художественное направление XIX века, характеризующееся передачей мгновенных впечатлений через свет, цвет и движение. Основатели – Клод Моне, Эдгар Дега, Пьер-Огюст Ренуар.</p>
+
+        </div>
+
+ 
+
+        <div class="term" id="term-civil-society">
+
+            <h2>Контррельеф</h2>
+
+            <p>форма скульптурного рельефа, где изображение углублено в материал, а не выступает над поверхностью, как в обычном рельефе.</p>
+
+        </div>
+
+ 
+
+        <div class="term" id="term-democracy">
+
+            <h2>Кубизм</h2>
+
+            <p>авангардное направление начала XX века, в котором объекты изображались в виде геометрических форм и представали одновременно с разных точек зрения. Основоположники – Пабло Пикассо и Жорж Брак.</p>
+
+        </div>
+
+ 
+
+        
+<script>
+
+        function filterTerms() {
+
+            const input = document.querySelector('.search-input');
+
+            const filter = input.value.toLowerCase();
+
+            const terms = document.querySelectorAll('.term');
+
+ 
+
+            terms.forEach(term => {
+
+                const title = term.querySelector('h2').textContent.toLowerCase();
+
+                if (title.includes(filter)) {
+
+                    term.style.display = '';
+
+                } else {
+
+                    term.style.display = 'none';
+
+                }
+
+            });
+
+        }
+
+    </script>
+ 
+
